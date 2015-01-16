@@ -16,9 +16,11 @@ public class Card
 
    public Card(String s, String r, int pV)
    {
+
       suit = s;
       rank = r;
       pointValue = pV;
+
    }
 
    public String suit()      { return suit; }

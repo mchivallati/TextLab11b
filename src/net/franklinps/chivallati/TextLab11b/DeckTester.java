@@ -11,9 +11,9 @@ public class DeckTester
 	public static void main(String[] args)
 	{  
       Deck deck = new Deck();
-      System.out.println(deck);
-      System.out.println(deck.getSize());
-      System.out.println(deck.isEmpty());
+      System.out.println( deck.toString() );
+      System.out.println( deck.getSize() );
+      System.out.println( deck.isEmpty() );
 	}
 }
 

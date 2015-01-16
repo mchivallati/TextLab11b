@@ -27,7 +27,7 @@ public class Card
    public String rank()      { return rank; }
    public int pointValue()   { return pointValue; }
  	
-   public boolean matches(Card otherCard) 
+   public boolean matches(Card otherCard)
    {
 		return otherCard.suit().equals(this.suit())
 			 && otherCard.rank().equals(this.rank())

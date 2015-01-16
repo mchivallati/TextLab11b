@@ -1,8 +1,5 @@
 package net.franklinps.chivallati.TextLab11b;
 
-/**
- * Created by CompSci-04 on 1/15/2015.
- */
 public class Deck {
 
 	private Card[] cards;

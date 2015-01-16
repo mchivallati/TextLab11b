@@ -32,11 +32,8 @@ public class Card
 		return otherCard.suit().equals(this.suit())
 			 && otherCard.rank().equals(this.rank())
 			 && otherCard.pointValue() == this.pointValue();
-	}
-  
-   public String toString()
-   {
-      return rank + " of " + suit + " (point value = " + pointValue + ")";
    }
-}
+  
+   public String toString() { return rank + " of " + suit + " (point value = " + pointValue + ")"; }
 
+}

@@ -8,12 +8,15 @@ package net.franklinps.chivallati.TextLab11b;// DeckTester01.java
 
 public class DeckTester
 {
-	public static void main(String[] args)
-	{  
-      Deck deck = new Deck();
-      System.out.println( deck.toString() );
-      System.out.println( deck.getSize() );
-      System.out.println( deck.isEmpty() );
-	}
-}
 
+      public static void main( String[] args )
+      {
+
+            Deck deck = new Deck();
+            System.out.println( deck.toString() );
+            System.out.println( deck.getSize() );
+            System.out.println( deck.isEmpty() );
+
+      }
+
+}

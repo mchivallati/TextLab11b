@@ -96,52 +96,52 @@ public class Deck {
 
 			if ( i + 1 == 14 ) {
 				rank = "Ace";
-				pointValue = i + 1;
+				pointValue = 1;
 			}
 
 			if ( i + 1 == 15 ) {
 				rank = "Two";
-				pointValue = i + 1;
+				pointValue = 2;
 			}
 
 			if ( i + 1 == 16 ) {
 				rank = "Three";
-				pointValue = i + 1;
+				pointValue = 3;
 			}
 
 			if ( i + 1 == 17 ) {
 				rank = "Four";
-				pointValue = i + 1;
+				pointValue = 4;
 			}
 
 			if ( i + 1 == 18 ) {
 				rank = "Five";
-				pointValue = i + 1;
+				pointValue = 5;
 			}
 
 			if ( i + 1 == 19 ) {
 				rank = "Six";
-				pointValue = i + 1;
+				pointValue = 6;
 			}
 
 			if ( i + 1 == 20 ) {
 				rank = "Seven";
-				pointValue = i + 1;
+				pointValue = 7;
 			}
 
 			if ( i + 1 == 21 ) {
 				rank = "Eight";
-				pointValue = i + 1;
+				pointValue = 8;
 			}
 
 			if ( i + 1 == 22 ) {
 				rank = "Nine";
-				pointValue = i + 1;
+				pointValue = 9;
 			}
 
 			if ( i + 1 == 23 ) {
 				rank = "Ten";
-				pointValue = i + 1;
+				pointValue = 10;
 			}
 
 			if ( i + 1 == 24 ) {
@@ -173,52 +173,52 @@ public class Deck {
 
 			if ( i + 1 == 27 ) {
 				rank = "Ace";
-				pointValue = i + 1;
+				pointValue = 1;
 			}
 
 			if ( i + 1 == 28 ) {
 				rank = "Two";
-				pointValue = i + 1;
+				pointValue = 2;
 			}
 
 			if ( i + 1 == 29 ) {
 				rank = "Three";
-				pointValue = i + 1;
+				pointValue = 3;
 			}
 
 			if ( i + 1 == 30 ) {
 				rank = "Four";
-				pointValue = i + 1;
+				pointValue = 4;
 			}
 
 			if ( i + 1 == 31 ) {
 				rank = "Five";
-				pointValue = i + 1;
+				pointValue = 5;
 			}
 
 			if ( i + 1 == 32 ) {
 				rank = "Six";
-				pointValue = i + 1;
+				pointValue = 6;
 			}
 
 			if ( i + 1 == 33 ) {
 				rank = "Seven";
-				pointValue = i + 1;
+				pointValue = 7;
 			}
 
 			if ( i + 1 == 34 ) {
 				rank = "Eight";
-				pointValue = i + 1;
+				pointValue = 8;
 			}
 
 			if ( i + 1 == 35 ) {
 				rank = "Nine";
-				pointValue = i + 1;
+				pointValue = 9;
 			}
 
 			if ( i + 1 == 36 ) {
 				rank = "Ten";
-				pointValue = i + 1;
+				pointValue = 10;
 			}
 
 			if ( i + 1 == 37 ) {
@@ -250,52 +250,52 @@ public class Deck {
 
 			if ( i + 1 == 40 ) {
 				rank = "Ace";
-				pointValue = i + 1;
+				pointValue = 1;
 			}
 
 			if ( i + 1 == 41 ) {
 				rank = "Two";
-				pointValue = i + 1;
+				pointValue = 2;
 			}
 
 			if ( i + 1 == 42 ) {
 				rank = "Three";
-				pointValue = i + 1;
+				pointValue = 3;
 			}
 
 			if ( i + 1 == 43 ) {
 				rank = "Four";
-				pointValue = i + 1;
+				pointValue = 4;
 			}
 
 			if ( i + 1 == 44 ) {
 				rank = "Five";
-				pointValue = i + 1;
+				pointValue = 5;
 			}
 
 			if ( i + 1 == 45 ) {
 				rank = "Six";
-				pointValue = i + 1;
+				pointValue = 6;
 			}
 
 			if ( i + 1 == 46 ) {
 				rank = "Seven";
-				pointValue = i + 1;
+				pointValue = 7;
 			}
 
 			if ( i + 1 == 47 ) {
 				rank = "Eight";
-				pointValue = i + 1;
+				pointValue = 8;
 			}
 
 			if ( i + 1 == 48 ) {
 				rank = "Nine";
-				pointValue = i + 1;
+				pointValue = 9;
 			}
 
 			if ( i + 1 == 49 ) {
 				rank = "Ten";
-				pointValue = i + 1;
+				pointValue = 10;
 			}
 
 			if ( i + 1 == 50 ) {
@@ -320,6 +320,8 @@ public class Deck {
 
 		}
 
+		shuffleDeck( 1000 );
+
 	}
 
 	public int getSize( ) {
@@ -340,6 +342,42 @@ public class Deck {
 		return temp;
 	}
 
+	private void swap( Card[] c , int x , int y )
+	{
 
+		Card temp;
+
+		temp = c[x];
+		c[x] = c[y];
+		c[y] = temp;
+
+	}
+
+	private void shuffleDeck( int shuffleTimes )
+	{
+
+		for ( int i = 0 ; i < shuffleTimes ; i++ )
+		{
+
+			int randomInt1 = randomInt( 0 , 51 );
+			int randomInt2 = randomInt( 0 , 51 );
+
+			swap( cards , randomInt1 , randomInt2 );
+
+		}
+
+	}
+
+	//---------- Random Number Method ---------//
+
+
+	public static int randomInt( int min, int max ) //generates a random number
+	{
+
+		int range = ( max + 1 ) - min; //used to control the maximum value the random method outputs
+
+		return (int) ( ( Math.random( ) * range ) + min ); //returns the value generated to randomNum( int min , int max )
+
+	}
 
 }
